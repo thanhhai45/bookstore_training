@@ -1,0 +1,31 @@
+# == Schema Information
+#
+# Table name: books
+#
+#  id             :bigint           not null, primary key
+#  title          :string
+#  description    :text
+#  published_at   :datetime
+#  author_id      :bigint           not null
+#  book_publisher :string
+#  issue_version  :integer
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  category_id    :bigint
+#
+
+one:
+  title: MyString
+  description: MyText
+  published_at: 2023-10-22 10:34:25
+  author: one
+  book_publisher: MyString
+  issue_version: 1
+
+two:
+  title: MyString
+  description: MyText
+  published_at: 2023-10-22 10:34:25
+  author: two
+  book_publisher: MyString
+  issue_version: 1
