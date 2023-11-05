@@ -1,32 +1,13 @@
-<div id="<%= dom_id book %>">
-  <p>
-    <strong>Title:</strong>
-    <%= book.title %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= book.description %>
-  </p>
-
-  <p>
-    <strong>Published at:</strong>
-    <%= book.published_at %>
-  </p>
-
-  <p>
-    <strong>Author:</strong>
-    <%= book.author_id %>
-  </p>
-
-  <p>
-    <strong>Book publisher:</strong>
-    <%= book.book_publisher %>
-  </p>
-
-  <p>
-    <strong>Issue version:</strong>
-    <%= book.issue_version %>
-  </p>
-
-</div>
+<tr>
+  <th scope="row"><%= book.id %></th>
+  <td><%= book.title %></td>
+  <td><%= book.author.first_name + " " + book.author.last_name %></td>
+  <td><%= book.published_at %></td>
+  <td class="d-flex">
+    <button type="button" class="btn btn-primary">
+      <%= link_to 'View detail', book, class: "text-decoration-none text-light" %>
+    </button>
+    <%= button_to 'Delete', book, method: :delete, class: "btn btn-danger text-light" %>
+  </td>
+</tr>
+  
